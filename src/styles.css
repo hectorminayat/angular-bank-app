@@ -1,1 +1,240 @@
-/* You can add global styles to this file, and also import other style files */
+/* latin-ext */
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(./assets/fonts/Noto/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5aDdu3mhPy1Fig.woff2)
+    format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(./assets/fonts/Noto/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5a7du3mhPy0.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  font-family: "Noto Sans";
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+  display: flex;
+}
+
+input,
+select button,
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+  font-family: "Noto Sans";
+}
+
+.btn {
+  font-size: 15px;
+  color: #1c2d54;
+  font-weight: 600;
+  appearance: none;
+  backface-visibility: hidden;
+  border-radius: 4px;
+  border-style: none;
+  align-items: center;
+  padding: 12px 24px;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  vertical-align: middle;
+  cursor: pointer;
+  line-height: 24px;
+  max-height: 54px;
+}
+
+.btn.primary {
+  background-color: #ffdd00;
+}
+
+.btn.primary:hover,
+.btn.primary:focus {
+  background-color: #ffd100;
+}
+
+.btn.primary:active {
+  background: #f2c600;
+  color: rgba(28, 45, 84, 0.8);
+}
+
+.btn.primary:disabled {
+  background: rgba(222, 206, 133, 0.5);
+  color: rgba(28, 45, 84, 0.3);
+}
+
+.btn.secundary {
+  background-color: #e9ecf3;
+}
+
+.btn.secundary:hover,
+.btn.secundary:focus {
+  background-color: #cbcdd3;
+}
+
+.btn.secundary:active {
+  background: #b4b5b8;
+  color: rgba(28, 45, 84, 0.8);
+}
+
+.btn.secundary:disabled {
+  background: rgba(233, 236, 243, 0.789);
+  color: rgba(28, 45, 84, 0.3);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #dee3ed;
+  border-radius: 4px;
+}
+
+.card-body {
+  padding: 3.5rem;
+}
+
+.card-header {
+  display: flex;
+  border-bottom: 1px solid black;
+  justify-content: center;
+}
+
+.card-header h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.table-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: auto;
+  min-width: 1000px !important;
+  width: 100%;
+}
+
+.table thead tr {
+  background: #f9fafc;
+  border-bottom: 4px solid #eceffa;
+}
+
+.table thead th {
+  border: none;
+  padding: 30px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #1c2d54;
+  text-align: left;
+}
+
+.table tbody tr {
+  margin-bottom: 10px;
+  border-bottom: 4px solid #f8f9fd;
+}
+
+.table tbody th,
+.table tbody td {
+  border: none;
+  padding: 20px;
+  font-size: 14px;
+  background: #fff;
+  vertical-align: middle;
+  color: #585858;
+  text-align: left;
+  width: auto;
+  white-space: nowrap;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.avatar img {
+  object-fit: cover;
+}
+
+.form-control label {
+  font-size: 14px;
+  font-weight: 500px;
+}
+input.control,
+select.control {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 48px;
+  padding: 0.8rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #4a4a4a;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input.control:focus,
+select.control:focus,
+input.control:focus-visible,
+select.control:focus-visible {
+  border-color: #616161;
+  border: 1px solid;
+  box-shadow: none;
+  outline: none;
+}
+
+.alert {
+  position: relative;
+  padding: 1rem 1.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.alert-warning strong{
+  color: #533f03;
+}

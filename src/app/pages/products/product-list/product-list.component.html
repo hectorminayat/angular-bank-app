@@ -1,0 +1,72 @@
+<div class="top">
+  <div>
+    <input
+      class="control search"
+      type="text"
+      placeholder="Buscar..."
+      #searchQuery
+      (input)="onSearch(searchQuery.value)"
+    />
+  </div>
+  <button class="btn primary" routerLink="/create">Agregar</button>
+</div>
+
+<div>
+  <div class="card">
+    <div class="card-body">
+    @if (loading) {
+    <p>loading</p>
+    } @else {
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Logo</th>
+          <th>Nombre del producto</th>
+          <th>Descripción</th>
+          <th>Fecha de liberación</th>
+          <th>Fecha de revisión</th>
+          <th width="10px"></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (product of items(); track product.id) {
+        <tr>
+          <td>
+            <div class="avatar">
+              <img [ngSrc]="product.logo" fill />
+            </div>
+          </td>
+          <td>
+            {{ product.name }}
+          </td>
+          <td>
+            {{ product.description }}
+          </td>
+          <td>
+            {{ product.dateRelease }}
+          </td>
+          <td>
+            {{ product.dateRevision }}
+          </td>
+          <td class="menu">
+            <app-dropdown-menu
+              [items]="['Editar', 'Eliminar']"
+              [value]="product"
+              (onClick)="onClickDropdown($event)"
+            />
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+    <app-pagination
+      [currentPage]="currentPage()"
+      [totalItems]="totalItems"
+      [defaultItemPerPage]="defaultItemPerPage"
+      (pageChanged)="onPageChange($event)"
+      (itemsPerPageChanged)="onItemsPerPageChanged($event)"
+    />
+    }
+  </div>
+</div>
+</div>

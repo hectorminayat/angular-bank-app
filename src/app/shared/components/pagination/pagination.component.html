@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="selectpage">
+    <select
+      class="control"
+      #itemPage
+      (change)="changeItemsPerPage(itemPage.value)"
+    >
+      @for(value of itemsPerPageValues;track value){
+      <option [value]="value" [selected]="itemsPerPage === value">
+        {{ value }}
+      </option>
+
+      }
+    </select>
+    <span>
+      {{totalItems}} Resultados
+    </span>
+  </div>
+
+  <div class="pagination">
+    <button
+      class="btn"
+      (click)="changePage(currentPage - 1)"
+      [disabled]="currentPage === 1"
+    >
+      ❮
+    </button>
+    <span class="pageinfo">Página {{ currentPage }} de {{ totalPages }}</span>
+    <button
+      class="btn"
+      (click)="changePage(currentPage + 1)"
+      [disabled]="currentPage === totalPages"
+    >
+      ❯
+    </button>
+  </div>
+</div>

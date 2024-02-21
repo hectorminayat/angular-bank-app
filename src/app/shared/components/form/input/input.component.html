@@ -1,0 +1,23 @@
+<label *ngIf="label">{{ label }}</label>
+<input
+  class="control"
+  [disabled]="disabled"
+  [type]="type"
+  [placeholder]="placeholder"
+  (input)="onInput($event)"
+  [value]="value"
+  [className]="
+    control.invalid && (control.dirty || control.touched) && control.errors
+      ? 'error control'
+      : 'control'
+  "
+/>
+
+<div
+  *ngIf="
+    control.invalid && (control.dirty || control.touched) && control.errors
+  "
+  class="error-message"
+>
+  {{ getError() }}
+</div>

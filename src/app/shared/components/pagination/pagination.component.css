@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.selectpage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container select {
+  padding: 0.5rem 1.2rem;
+}
+
+.container span {
+  padding: 0px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.container button {
+  padding: 5px 20px;
+}
+
+.container button:disabled {
+  background: #f4f4f4;
+  opacity: 0.8;
+}

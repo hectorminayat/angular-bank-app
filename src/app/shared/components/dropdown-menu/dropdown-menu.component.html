@@ -1,0 +1,15 @@
+<div class="dropdown" (documentClick)="toggleDropdown()">
+  <a href="#" (click)="toggleDropdown()" class="dropdown-toggle">
+    <img src="assets/icons/more.svg" width="30" height="30" />
+  </a>
+
+  <ul
+    class="dropdown-menu"
+    [ngClass]="{ open: isOpen }"
+    (click)="handleMenuClick($event)"
+  >
+    @for (item of items; track item; let i = $index) {
+    <li (click)="selectItem(i)">{{ item }}</li>
+    }
+  </ul>
+</div>

@@ -1,0 +1,14 @@
+<ng-container *ngIf="display$ | async as display">
+  <section [class.open]="display === 'open'" (click)="closeBackdrop()">
+    <div class="dialog" (click)="$event.stopPropagation()">
+      <div class="body">
+        <p class="message">{{message}}</p>
+      </div>
+      <div class="footer">
+        <button class="btn secundary" (click)="cancel()">{{cancelText}}</button>
+        <div class="divider"></div>
+        <button class="btn primary" (click)="confirm()">{{confirmText}}</button>
+      </div>
+    </div>
+  </section>
+</ng-container>
