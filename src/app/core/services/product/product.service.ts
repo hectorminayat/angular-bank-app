@@ -30,14 +30,12 @@ export class ProductService {
   }
 
   edit(body: ProductRequest): Observable<Product> {
-    return this.http.put<Product>('bp/products', body).pipe((product: any) => {
-      return { ...product, dateRelease: product['date_release'], dateRevision: product['date_revision'] }
-    }
-    );
+    return this.http.put<Product>('bp/products', body);
+    
   }
 
   delete(id: string): Observable<string> {
-    return this.http.delete<string>('bp/products', { params: { id: id } })
+    return this.http.delete('bp/products', { params: { id: id }, responseType:"text"})
   }
 
 }

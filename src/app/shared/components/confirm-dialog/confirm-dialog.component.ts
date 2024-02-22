@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ConfirmDialogService } from '../../services/confirmDialog/confirm-dialog.service';
 
@@ -17,6 +17,7 @@ export class ConfirmDialogComponent {
   @Input() message: string = "";
   @Input() confirmText: string = "Aceptar";
   @Input() cancelText: string = "Cancelar";
+  @Input() enableCancelText: boolean = true;
   @Output() onConfirm: EventEmitter<any> = new EventEmitter();
   @Output() onCancel: EventEmitter<any> = new EventEmitter();
 

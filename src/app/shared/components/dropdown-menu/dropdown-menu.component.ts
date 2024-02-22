@@ -31,7 +31,8 @@ export class DropdownMenuComponent {
     this.documentClickListener(); // Remove event listener on destroy
   }
 
-  toggleDropdown() {
+  toggleDropdown(event: Event) {
+    event.stopPropagation();
     this.isOpen = !this.isOpen;
   }
 

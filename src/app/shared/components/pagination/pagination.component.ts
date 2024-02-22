@@ -15,7 +15,7 @@ export class PaginationComponent {
   @Output() pageChanged: EventEmitter<number> = new EventEmitter();
   @Output() itemsPerPageChanged: EventEmitter<number> = new EventEmitter();
   itemsPerPageValues: number[] = [
-    2, 5, 10, 20
+    5, 10, 20
   ]
   itemsPerPage: number = this.itemsPerPageValues[0];
 

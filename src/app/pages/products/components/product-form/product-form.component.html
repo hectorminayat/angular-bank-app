@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-header">
-    <h2>Formulario de Registro</h2>
+    <h2>{{title}}</h2>
   </div>
   <div class="card-body">
     <form [formGroup]="productForm">
@@ -72,10 +72,3 @@
     </div>
   </div>
 </div>
-<app-confirm-dialog
-  message="¡Producto registrado exitosamente!"
-  cancelText="Ir al inicio"
-  confirmText="Registrar otro"
-  (onCancel)="onCancelDialog($event)"
-  (onConfirm)="onConfirmDialog($event)"
-/>

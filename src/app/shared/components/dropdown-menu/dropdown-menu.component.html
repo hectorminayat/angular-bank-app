@@ -1,5 +1,5 @@
-<div class="dropdown" (documentClick)="toggleDropdown()">
-  <a href="#" (click)="toggleDropdown()" class="dropdown-toggle">
+<div class="dropdown" (documentClick)="toggleDropdown($event)">
+  <a href="javascript:void(0);" (click)="toggleDropdown($event)" class="dropdown-toggle">
     <img src="assets/icons/more.svg" width="30" height="30" />
   </a>
 

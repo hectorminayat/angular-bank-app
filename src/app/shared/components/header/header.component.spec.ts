@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NgOptimizedImage } from '@angular/common';
 
 import { HeaderComponent } from './header.component';
 
@@ -8,7 +9,8 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderComponent]
+      declarations: [HeaderComponent],
+      imports: [NgOptimizedImage]
     })
     .compileComponents();
     

@@ -1,1 +1,16 @@
-<p>product-edit works!</p>
+<app-product-form
+  [product]="product"
+  [editMode]="true"
+  [loading]="loading"
+  [existsId]="existsId"
+  [existsIdValue]="existsIdValue"
+  (onSubmit)="submit($event)"
+  title="Formulario de Edicion"
+/>
+
+<app-confirm-dialog
+  message="¡Producto editado exitosamente!"
+  confirmText="Aceptar"
+  [enableCancelText]="false"
+  (onConfirm)="onConfirmDialog($event)"
+/>
