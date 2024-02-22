@@ -29,7 +29,7 @@ export class ProductEditComponent {
   existsIdValue = '';
   product!: Product;
 
-  constructor(private service: ProductService, private router: Router, private dialogService: ConfirmDialogService) {
+  constructor(public service: ProductService, public router: Router, public dialogService: ConfirmDialogService) {
     
     if (this.router.getCurrentNavigation()?.extras.state && this.router.getCurrentNavigation()?.extras?.state!['id']) {
       this.product = this.router.getCurrentNavigation()?.extras.state as Product;
