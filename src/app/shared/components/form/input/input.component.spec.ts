@@ -8,7 +8,9 @@ describe('InputComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [InputComponent]
+      imports: [InputComponent]
+    }).overrideComponent(InputComponent, {
+      set: { standalone: true }
     }).compileComponents();
   });
 

@@ -9,8 +9,9 @@ describe('ProductFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReactiveFormsModule],
-      declarations: [ProductFormComponent]
+      imports: [ProductFormComponent, ReactiveFormsModule],
+    }).overrideComponent(ProductFormComponent, {
+      set: {standalone: true}
     })
     .compileComponents();
     

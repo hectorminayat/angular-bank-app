@@ -30,8 +30,7 @@ describe('ProductListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CommonModule, RouterTestingModule],
-      declarations: [ProductListComponent, NgOptimizedImage]
+      imports: [CommonModule, RouterTestingModule, ProductListComponent, NgOptimizedImage],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ProductListComponent);

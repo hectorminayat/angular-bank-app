@@ -26,8 +26,7 @@ describe('ProductCreateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [ProductCreateComponent],
+      imports: [RouterTestingModule, ProductCreateComponent],
       providers: [ProductService, ConfirmDialogService],
     }).compileComponents();
   });

@@ -9,8 +9,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HeaderComponent],
-      imports: [NgOptimizedImage]
+      imports: [NgOptimizedImage, HeaderComponent]
     })
     .compileComponents();
     
